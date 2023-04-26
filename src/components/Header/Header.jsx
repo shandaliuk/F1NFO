@@ -1,8 +1,14 @@
 import { useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { AiOutlineClose } from 'react-icons/ai';
-import { Container } from 'components/Container/Container';
-import { Navigation, HeaderButton, LinksList } from './Header.styled';
+import { Logo } from 'components/Logo/Logo';
+import {
+  PageHeader,
+  Navigation,
+  HeaderButton,
+  LinksList,
+  HamburgerIcon,
+  CloseIcon,
+  NavListLink,
+} from './Header.styled';
 
 export const Header = () => {
   const [isOpen, setOpening] = useState(false);
@@ -10,26 +16,30 @@ export const Header = () => {
   const handleClick = () => setOpening(!isOpen);
 
   return (
-    <header>
-      <Container>
-        <Navigation>
-          <p>Logo</p>
-          {isOpen ? (
-            <HeaderButton type="button" onClick={handleClick}>
-              <AiOutlineClose />
-            </HeaderButton>
-          ) : (
-            <HeaderButton type="button" onClick={handleClick}>
-              <GiHamburgerMenu />
-            </HeaderButton>
-          )}
-          <LinksList className={isOpen ? 'active' : 'inactive'}>
-            <li>Schedule</li>
-            <li>Drivers & Teams</li>
-            <li>Standings</li>
-          </LinksList>
-        </Navigation>
-      </Container>
-    </header>
+    <PageHeader>
+      <Navigation>
+        <Logo />
+        {isOpen ? (
+          <HeaderButton type="button" onClick={handleClick}>
+            <CloseIcon />
+          </HeaderButton>
+        ) : (
+          <HeaderButton type="button" onClick={handleClick}>
+            <HamburgerIcon />
+          </HeaderButton>
+        )}
+        <LinksList className={isOpen ? 'active' : 'inactive'}>
+          <li>
+            <NavListLink>Schedule</NavListLink>
+          </li>
+          <li>
+            <NavListLink>Standings</NavListLink>
+          </li>
+          <li>
+            <NavListLink>Drivers & Teams</NavListLink>
+          </li>
+        </LinksList>
+      </Navigation>
+    </PageHeader>
   );
 };

@@ -46,12 +46,4 @@ body {
     font-family: ${props => props.theme.fonts.primary};
     background-color: ${props => props.theme.colors.primary};
     color: ${props => props.theme.colors.tertiary};
-}
-
-.active {
-  display: block;
-}
-
-.inactive {
-  display: none;
 }`;
