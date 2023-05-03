@@ -1,5 +1,15 @@
-import { Header } from './Header/Header';
+import { Routes, Route } from 'react-router-dom';
+import { SharedLayout } from './SharedLayout/SharedLayout';
 
 export const App = () => {
-  return <Header />;
+  return (
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element />
+        <Route path="schedule" />
+        <Route path="standings" />
+        <Route path="drivers-teams" />
+      </Route>
+    </Routes>
+  );
 };

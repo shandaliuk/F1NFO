@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
+import { NavLink } from 'react-router-dom';
 
 export const PageHeader = styled.header`
   max-width: 1376px;
@@ -101,12 +102,29 @@ export const LinksList = styled.ul`
   }
 `;
 
-export const NavListLink = styled.div`
+export const NavListLink = styled(NavLink)`
   font-size: 24px;
   display: inline-block;
   font-weight: 400;
+  color: ${props => props.theme.colors.tertiary};
+  transition: color ${props => props.theme.transitions.main};
 
   @media screen and (min-width: 992px) {
     font-size: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    color: ${props => props.theme.colors.accent};
+  }
+
+  &.active {
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: ${props => props.theme.colors.accent};
+    }
   }
 `;

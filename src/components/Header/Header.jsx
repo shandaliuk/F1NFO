@@ -30,13 +30,13 @@ export const Header = () => {
         )}
         <LinksList className={isOpen ? 'active' : 'inactive'}>
           <li>
-            <NavListLink>Schedule</NavListLink>
+            <NavListLink to="schedule">Schedule</NavListLink>
           </li>
           <li>
-            <NavListLink>Standings</NavListLink>
+            <NavListLink to="standings">Standings</NavListLink>
           </li>
           <li>
-            <NavListLink>Drivers & Teams</NavListLink>
+            <NavListLink to="drivers-teams">Drivers & Teams</NavListLink>
           </li>
         </LinksList>
       </Navigation>
