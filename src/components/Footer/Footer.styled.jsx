@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const LogoWrapper = styled.div`
-  display: flex;
-  justify-content: center;
+  display: inline-block;
+  margin: 0 auto;
 `;
 
 export const SiteFooter = styled.footer`
@@ -16,7 +16,6 @@ export const SiteFooter = styled.footer`
 `;
 
 export const FooterContainer = styled.div`
-  box-sizing: content-box;
   margin: 0 auto;
   max-width: 60rem;
   padding: 0 1em;
