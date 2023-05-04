@@ -1,5 +1,13 @@
 import { useState } from 'react';
 import { useGetLastRaceResultsQuery } from 'services/formulaOneApi/formulaOneApi';
+import { getImageLink } from 'services/images/getImageLink';
+import {
+  PageMain,
+  MainSectionWrapper,
+  CurrentRaceWrapper,
+  CurrentRaceImage,
+  CurrentRaceTitle,
+} from './Home.styled';
 
 export const Home = () => {
   const [lastRaceResults, setLastRaceResults] = useState(null);
@@ -18,11 +26,29 @@ export const Home = () => {
     !isLoading &&
     !isError &&
     lastRaceResults && (
-      <main>
-        <section>
-          <div>{lastRaceResults.Circuit.Location.country} results</div>
-        </section>
-      </main>
+      <PageMain>
+        <MainSectionWrapper>
+          <section>
+            {/* Component */}
+            <CurrentRaceWrapper>
+              <CurrentRaceImage
+                style={{
+                  backgroundImage: `url(${getImageLink({
+                    type: 'country',
+                    query: lastRaceResults.Circuit.Location.country,
+                  })})`,
+                }}
+              >
+                <CurrentRaceTitle>
+                  {lastRaceResults.Circuit.Location.country} results
+                </CurrentRaceTitle>
+              </CurrentRaceImage>
+            </CurrentRaceWrapper>
+            {/* Component */}
+            {/* Component */}
+          </section>
+        </MainSectionWrapper>
+      </PageMain>
     )
   );
 };

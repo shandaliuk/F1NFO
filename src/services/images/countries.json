@@ -1,0 +1,26 @@
+{
+  "countries": {
+    "Australia": "https://i.ibb.co/JQkZG7Y/Australia.png",
+    "USA": "https://i.ibb.co/BTFNQvq/United-States.png",
+    "United States": "https://i.ibb.co/BTFNQvq/United-States.png",
+    "UK": "https://i.ibb.co/FsKFwjR/UK.png",
+    "UAE": "https://i.ibb.co/Cm7TTCk/UAE.png",
+    "Singapore": "https://i.ibb.co/bXCGKrL/Singapore.png",
+    "Saudi Arabia": "https://i.ibb.co/G5TvbZ6/Saudi-Arabia.png",
+    "Qatar": "https://i.ibb.co/ThLZWkz/Qatar.png",
+    "Netherlands": "https://i.ibb.co/vsb4Gfp/Netherlands.png",
+    "Monaco": "https://i.ibb.co/m4wpWkG/Monaco.png",
+    "Mexico": "https://i.ibb.co/xS8hJjD/Mexico.png",
+    "Italy": "https://i.ibb.co/WtQLvTy/Italy.png",
+    "Japan": "https://i.ibb.co/QdfTbFv/Japan.png",
+    "Hungary": "https://i.ibb.co/WgZgB1v/Hungary.png",
+    "Canada": "https://i.ibb.co/fSyK3Vx/Canada.png",
+    "Brazil": "https://i.ibb.co/zVX18y4/Brazil.png",
+    "Belgium": "https://i.ibb.co/c34GXrj/Belgium.png",
+    "Bahrain": "https://i.ibb.co/0qKDBN2/Bahrain.png",
+    "Azerbaijan": "https://i.ibb.co/FBYzPDL/Azerbaijan.png",
+    "Austria": "https://i.ibb.co/qskCGnk/Austria.png",
+    "Spain": "https://i.ibb.co/p0VTJGG/Spain.png",
+    "default": "https://i.ibb.co/ZGMGwjP/default.png"
+  }
+}

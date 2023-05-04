@@ -1,0 +1,24 @@
+{
+  "drivers": {
+    "max_verstappen": "https://i.ibb.co/JcszVn7/Verstappen.png",
+    "perez": "https://i.ibb.co/fGzf7C9/Perez.png",
+    "leclerc": "https://i.ibb.co/4fxD6YT/Leclerc.png",
+    "sainz": "https://i.ibb.co/0QJvthf/Sainz.png",
+    "hamilton": "https://i.ibb.co/x17zMn0/Hamilton.png",
+    "russell": "https://i.ibb.co/9sP16dQ/Russell.png",
+    "alonso": "https://i.ibb.co/MfxNwCP/Alonso.png",
+    "stroll": "https://i.ibb.co/2kspMwT/Stroll.png",
+    "gasly": "https://i.ibb.co/XjqmTHG/Gasly.png",
+    "ocon": "https://i.ibb.co/s3vJTQJ/Ocon.png",
+    "kevin_magnussen": "https://i.ibb.co/RYdktdh/Magnussen.png",
+    "hulkenberg": "https://i.ibb.co/fHh4hQD/Hulkenberg.png",
+    "albon": "https://i.ibb.co/DwQH56h/Albon.png",
+    "sargeant": "https://i.ibb.co/PWt6jFJ/Sargeant.png",
+    "norris": "https://i.ibb.co/1v7MzvJ/Norris.png",
+    "piastri": "https://i.ibb.co/TgG5f1c/Piastri.png",
+    "de_vries": "https://i.ibb.co/3rkcGhs/Vries.png",
+    "tsunoda": "https://i.ibb.co/L1XBCT4/Tsunoda.png",
+    "bottas": "https://i.ibb.co/YkNm7Rq/Bottas.png",
+    "zhou": "https://i.ibb.co/PCcpMfX/Zhou.png"
+  }
+}

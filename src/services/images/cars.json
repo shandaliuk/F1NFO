@@ -1,0 +1,14 @@
+{
+  "cars": {
+    "red_bull": "https://i.ibb.co/HzxfrDc/Red-Bull-Car.png",
+    "ferrari": "https://i.ibb.co/yFv1kVW/Ferrari-Car.png",
+    "mercedes": "https://i.ibb.co/FhBX8ds/Mercedes-Car.png",
+    "aston_martin": "https://i.ibb.co/s1dBBnz/Aston-Martin-Car.png",
+    "alpine": "https://i.ibb.co/L1fXTKr/Alpine-Car.png",
+    "alpha_tauri": "https://i.ibb.co/7JCQyrG/Alpha-Tauri-Car.png",
+    "williams": "https://i.ibb.co/RYKhzqn/Williams-Car.png",
+    "mclaren": "https://i.ibb.co/HtZ8NMx/Mclaren-Car.png",
+    "haas": "https://i.ibb.co/BCFJ3kQ/HaasCar.png",
+    "alfa": "https://i.ibb.co/LRJc0Vk/Alfa-Romeo-Car.png"
+  }
+}
