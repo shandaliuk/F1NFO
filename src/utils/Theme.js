@@ -4,6 +4,18 @@ export const theme = {
     secondary: '#865DFF',
     tertiary: '#FFA3FD',
     accent: '#E384FF',
+    teams: {
+      mercedes: '#6caea9',
+      mclaren: '#ff8700',
+      ferrari: '#fe0100',
+      aston_martin: '#02574f',
+      red_bull: '#15185e',
+      alpine: '#0f1d2b',
+      alphatauri: '#272850',
+      alfa: '#9a0000',
+      haas: '#ee193b',
+      williams: '#00a0df',
+    },
   },
   fonts: {
     primary: "'Lexend', sans-serif",
