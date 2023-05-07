@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Container } from 'components/Container/Container';
 import { Logo } from 'components/Logo/Logo';
 import {
   PageHeader,
@@ -17,29 +18,25 @@ export const Header = () => {
 
   return (
     <PageHeader>
-      <Navigation>
-        <Logo />
-        {isOpen ? (
+      <Container>
+        <Navigation>
+          <Logo />
           <HeaderButton type="button" onClick={handleClick}>
-            <CloseIcon />
+            {isOpen ? <CloseIcon /> : <HamburgerIcon />}
           </HeaderButton>
-        ) : (
-          <HeaderButton type="button" onClick={handleClick}>
-            <HamburgerIcon />
-          </HeaderButton>
-        )}
-        <LinksList className={isOpen ? 'active' : 'inactive'}>
-          <li>
-            <NavListLink to="schedule">Schedule</NavListLink>
-          </li>
-          <li>
-            <NavListLink to="standings">Standings</NavListLink>
-          </li>
-          <li>
-            <NavListLink to="drivers-teams">Drivers & Teams</NavListLink>
-          </li>
-        </LinksList>
-      </Navigation>
+          <LinksList className={isOpen ? 'active' : 'inactive'}>
+            <li>
+              <NavListLink to="schedule">Schedule</NavListLink>
+            </li>
+            <li>
+              <NavListLink to="standings">Standings</NavListLink>
+            </li>
+            <li>
+              <NavListLink to="drivers-teams">Drivers & Teams</NavListLink>
+            </li>
+          </LinksList>
+        </Navigation>
+      </Container>
     </PageHeader>
   );
 };

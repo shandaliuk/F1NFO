@@ -4,40 +4,26 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
 
 export const PageHeader = styled.header`
-  max-width: 1376px;
-  padding: 20px 30px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
-  width: 100%;
-  font-weight: 300;
-
-  @media screen and (min-width: 992px) {
-    padding: 30px 60px;
-  }
-`;
-
-export const HamburgerIcon = styled(GiHamburgerMenu)`
-  width: 30px;
-  height: 30px;
-  display: inherit;
-  position: relative;
-  z-index: 11;
-`;
-
-export const CloseIcon = styled(AiOutlineClose)`
-  width: 30px;
-  height: 30px;
-  display: inherit;
-  position: relative;
-  z-index: 11;
+  padding: 20px 0;
 `;
 
 export const Navigation = styled.nav`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  position: inherit;
+`;
+
+export const HamburgerIcon = styled(GiHamburgerMenu)`
+  width: 25px;
+  height: 25px;
+`;
+
+export const CloseIcon = styled(AiOutlineClose)`
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 25px;
+  height: 30px;
+  z-index: 11;
 `;
 
 export const HeaderButton = styled.button`
@@ -45,17 +31,7 @@ export const HeaderButton = styled.button`
   border: none;
   color: ${props => props.theme.colors.tertiary};
 
-  @media screen and (min-width: 992px) {
-    display: none;
-  }
-`;
-
-export const CloseButton = styled.button`
-  background-color: transparent;
-  border: none;
-  color: ${props => props.theme.colors.tertiary};
-
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 `;
@@ -63,21 +39,17 @@ export const CloseButton = styled.button`
 export const LinksList = styled.ul`
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
-  background-color: #030a18;
-  z-index: 10;
+  right: 0;
+  left: 0;
   display: none;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-top: 0px;
-  margin-bottom: 0px;
   row-gap: 20px;
-  height: 100%;
   overflow: hidden;
   background-color: ${props => props.theme.colors.primary};
+  z-index: 10;
 
   &.active {
     display: flex;
@@ -87,14 +59,11 @@ export const LinksList = styled.ul`
     display: none;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     position: relative;
+    display: flex;
     flex-direction: row;
     column-gap: 40px;
-
-    &.active {
-      display: flex;
-    }
 
     &.inactive {
       display: flex;
@@ -103,28 +72,10 @@ export const LinksList = styled.ul`
 `;
 
 export const NavListLink = styled(NavLink)`
-  font-size: 24px;
-  display: inline-block;
-  font-weight: 400;
   color: ${props => props.theme.colors.tertiary};
-  transition: color ${props => props.theme.transitions.main};
+  font-size: 24px;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     font-size: 16px;
-  }
-
-  &:hover,
-  &:focus {
-    color: ${props => props.theme.colors.accent};
-  }
-
-  &.active {
-    &::after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: ${props => props.theme.colors.accent};
-    }
   }
 `;

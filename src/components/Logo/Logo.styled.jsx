@@ -5,8 +5,6 @@ export const LogoLink = styled(Link)`
   display: block;
   width: 123px;
   height: 40px;
-  letter-spacing: 1px;
-  z-index: 11;
   color: ${props => props.theme.colors.tertiary};
   transition: color ${props => props.theme.transitions.main};
 
@@ -15,7 +13,7 @@ export const LogoLink = styled(Link)`
     color: ${props => props.theme.colors.accent};
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1280px) {
     width: 185px;
     height: 60px;
   }

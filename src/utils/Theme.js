@@ -3,7 +3,7 @@ export const theme = {
     primary: '#191825',
     secondary: '#865DFF',
     tertiary: '#FFA3FD',
-    accent: '#E384FF',
+    accent: '#F0EB8D',
     teams: {
       mercedes: '#6caea9',
       mclaren: '#ff8700',
