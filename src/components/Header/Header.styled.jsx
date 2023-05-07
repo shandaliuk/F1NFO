@@ -74,6 +74,7 @@ export const LinksList = styled.ul`
 export const NavListLink = styled(NavLink)`
   color: ${props => props.theme.colors.tertiary};
   font-size: 24px;
+  text-shadow: ${props => props.theme.shadows.text};
 
   @media screen and (min-width: 768px) {
     font-size: 16px;

@@ -1,6 +1,6 @@
 import { useTheme } from 'styled-components';
 import { getImageLink } from 'services/images/getImageLink';
-import { BestWorstConstructor } from 'components/BestWorstConstructor/BestWorstConstructor';
+import { BestWorstConstructor } from 'components/LastRaceSection/BestAndWorstTeam/BestAndWorstTeam';
 import {
   HomeBoxBottom,
   BottomDriver,
@@ -10,9 +10,9 @@ import {
   Subheader,
   RecentPoints,
   MainPoints,
-} from './WorstResults.styled';
+} from './WorstDrivers.styled';
 
-export const WorstResults = ({ lastRaceResults }) => {
+export const WorstDrivers = ({ lastRaceResults }) => {
   const theme = useTheme();
 
   return (
@@ -128,7 +128,6 @@ export const WorstResults = ({ lastRaceResults }) => {
           <MainPoints>{lastRaceResults.Results[17].points}</MainPoints>
         </RecentPoints>
       </BottomDriver>
-      <BestWorstConstructor lastRaceResults={lastRaceResults} />
     </HomeBoxBottom>
   );
 };

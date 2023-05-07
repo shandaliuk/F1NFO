@@ -10,9 +10,9 @@ import {
   RecentPointsConstructor,
   ConstructorName,
   MainPoints,
-} from './BestWorstConstructor.styled';
+} from './BestAndWorstTeam.styled';
 
-export const BestWorstConstructor = ({ lastRaceResults }) => {
+export const BestAndWorstTeam = ({ lastRaceResults }) => {
   const theme = useTheme();
 
   return (
