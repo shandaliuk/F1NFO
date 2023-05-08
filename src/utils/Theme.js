@@ -4,6 +4,9 @@ export const theme = {
     secondary: '#865DFF',
     tertiary: '#FFA3FD',
     accent: '#F0EB8D',
+    firstPlace: '#FFD700',
+    secondPlace: '#C0C0C0',
+    thirdPlace: '#cd7f32',
     teams: {
       mercedes: '#6caea9',
       mclaren: '#ff8700',
