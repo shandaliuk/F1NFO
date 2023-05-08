@@ -1,82 +1,55 @@
 import { useTheme } from 'styled-components';
 import { getImageLink } from 'services/images/getImageLink';
 import {
-  BottomContructor,
-  ConstructorInner,
-  NameInner,
-  NameVertical,
-  HomeConstructorImage,
-  HomeConstructorWrapper,
-  RecentPointsConstructor,
+  CarsList,
+  CarsListItem,
+  ConstructorPoints,
+  CarImage,
+  CarCategory,
   ConstructorName,
-  MainPoints,
 } from './BestAndWorstTeam.styled';
 
-export const BestAndWorstTeam = ({ lastRaceResults }) => {
+export const BestAndWorstTeam = ({ results }) => {
   const theme = useTheme();
 
   return (
-    <BottomContructor>
-      <ConstructorInner
+    <CarsList>
+      <CarsListItem
         style={{
           border: `2px solid ${
-            theme.colors.teams[
-              lastRaceResults.Results[0].Constructor.constructorId
-            ]
+            theme.colors.teams[results[0].Constructor.constructorId]
           }`,
         }}
       >
-        <NameInner>
-          <NameVertical>First</NameVertical>
-        </NameInner>
-        <HomeConstructorWrapper>
-          <RecentPointsConstructor className="constructor">
-            <MainPoints>{lastRaceResults.Results[0].points}</MainPoints>
-          </RecentPointsConstructor>
-          <HomeConstructorImage
-            width="90px"
-            height="27px"
-            src={getImageLink({
-              type: 'car',
-              query: lastRaceResults.Results[0].Constructor.constructorId,
-            })}
-            alt={lastRaceResults.Results[0].Constructor.name}
-          />
-          <ConstructorName>
-            {lastRaceResults.Results[0].Constructor.name}
-          </ConstructorName>
-        </HomeConstructorWrapper>
-      </ConstructorInner>
-      <ConstructorInner
+        <ConstructorPoints>{results[0].points}</ConstructorPoints>
+        <CarImage
+          src={getImageLink({
+            type: 'car',
+            query: results[0].Constructor.constructorId,
+          })}
+          alt={results[0].Constructor.name}
+        />
+        <CarCategory>Best</CarCategory>
+        <ConstructorName>{results[0].Constructor.name}</ConstructorName>
+      </CarsListItem>
+      <CarsListItem
         style={{
           border: `2px solid ${
-            theme.colors.teams[
-              lastRaceResults.Results[19].Constructor.constructorId
-            ]
+            theme.colors.teams[results[19].Constructor.constructorId]
           }`,
         }}
       >
-        <NameInner>
-          <NameVertical>Last</NameVertical>
-        </NameInner>
-        <HomeConstructorWrapper>
-          <RecentPointsConstructor className="constructor">
-            <MainPoints>{lastRaceResults.Results[19].points}</MainPoints>
-          </RecentPointsConstructor>
-          <HomeConstructorImage
-            width="90px"
-            height="27px"
-            src={getImageLink({
-              type: 'car',
-              query: lastRaceResults.Results[19].Constructor.constructorId,
-            })}
-            alt={lastRaceResults.Results[19].Constructor.name}
-          />
-          <ConstructorName>
-            {lastRaceResults.Results[19].Constructor.name}
-          </ConstructorName>
-        </HomeConstructorWrapper>
-      </ConstructorInner>
-    </BottomContructor>
+        <ConstructorPoints>{results[19].points}</ConstructorPoints>
+        <CarImage
+          src={getImageLink({
+            type: 'car',
+            query: results[19].Constructor.constructorId,
+          })}
+          alt={results[19].Constructor.name}
+        />
+        <CarCategory>Worst</CarCategory>
+        <ConstructorName>{results[19].Constructor.name}</ConstructorName>
+      </CarsListItem>
+    </CarsList>
   );
 };

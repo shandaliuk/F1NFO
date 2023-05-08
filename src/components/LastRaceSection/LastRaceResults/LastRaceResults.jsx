@@ -3,13 +3,13 @@ import { WorstDrivers } from 'components/LastRaceSection/WorstDrivers/WorstDrive
 import { BestAndWorstTeam } from '../BestAndWorstTeam/BestAndWorstTeam';
 import { ResultsWrapper } from './LastRaceResults.styled';
 
-export const LastRaceResults = ({ lastRaceResults }) => {
+export const LastRaceResults = ({ results }) => {
   return (
     <ResultsWrapper>
-      <BestDrivers results={lastRaceResults.Results} />
+      <BestDrivers results={results} />
       <div>
-        <WorstDrivers results={lastRaceResults.Results} />
-        <BestAndWorstTeam lastRaceResults={lastRaceResults} />
+        <WorstDrivers results={results} />
+        <BestAndWorstTeam results={results} />
       </div>
     </ResultsWrapper>
   );

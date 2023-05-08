@@ -7,7 +7,7 @@ export const LastRaceSection = ({ lastRaceResults }) => {
     <section>
       <Container>
         <LastRaceBanner country={lastRaceResults.Circuit.Location.country} />
-        <LastRaceResults lastRaceResults={lastRaceResults} />
+        <LastRaceResults results={lastRaceResults.Results} />
       </Container>
     </section>
   );
