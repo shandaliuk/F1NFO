@@ -8,7 +8,7 @@ export const LastRaceResults = ({ lastRaceResults }) => {
     <ResultsWrapper>
       <BestDrivers results={lastRaceResults.Results} />
       <div>
-        <WorstDrivers lastRaceResults={lastRaceResults} />
+        <WorstDrivers results={lastRaceResults.Results} />
         <BestAndWorstTeam lastRaceResults={lastRaceResults} />
       </div>
     </ResultsWrapper>

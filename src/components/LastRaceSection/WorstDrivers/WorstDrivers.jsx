@@ -1,133 +1,113 @@
 import { useTheme } from 'styled-components';
 import { getImageLink } from 'services/images/getImageLink';
-import { BestWorstConstructor } from 'components/LastRaceSection/BestAndWorstTeam/BestAndWorstTeam';
 import {
-  HomeBoxBottom,
-  BottomDriver,
-  LoserDriverImage,
-  NameWrapper,
-  Subname,
-  Subheader,
-  RecentPoints,
-  MainPoints,
+  WorstDriversWrapper,
+  WorstDriversHeading,
+  WorstDriversList,
+  WorstDriversListItem,
+  WorstDriverImage,
+  DriverName,
+  DriverPosition,
+  DriverPoints,
 } from './WorstDrivers.styled';
 
-export const WorstDrivers = ({ lastRaceResults }) => {
+export const WorstDrivers = ({ results }) => {
   const theme = useTheme();
 
   return (
-    <HomeBoxBottom>
-      <BottomDriver
-        style={{
-          border: `2px solid ${
-            theme.colors.teams[
-              lastRaceResults.Results[19].Constructor.constructorId
-            ]
-          }`,
-        }}
-      >
-        <div>
-          <LoserDriverImage
-            src={getImageLink({
-              type: 'driver',
-              query: lastRaceResults.Results[19].Driver.driverId,
-            })}
-            alt={lastRaceResults.Results[19].Driver.familyName}
+    <WorstDriversWrapper>
+      <WorstDriversHeading>Bottom scorers</WorstDriversHeading>
+      <div>
+        <WorstDriversList>
+          <WorstDriversListItem
             style={{
               border: `2px solid ${
-                theme.colors.teams[
-                  lastRaceResults.Results[19].Constructor.constructorId
-                ]
+                theme.colors.teams[results[19].Constructor.constructorId]
               }`,
             }}
-          />
-        </div>
-        <NameWrapper>
-          <Subname>
-            {lastRaceResults.Results[19].Driver.givenName +
-              ' ' +
-              lastRaceResults.Results[19].Driver.familyName}
-          </Subname>
-          <Subheader>{lastRaceResults.Results[19].position + 'th'}</Subheader>
-        </NameWrapper>
-        <RecentPoints>
-          <MainPoints>{lastRaceResults.Results[19].points}</MainPoints>
-        </RecentPoints>
-      </BottomDriver>
-      <BottomDriver
-        style={{
-          border: `2px solid ${
-            theme.colors.teams[
-              lastRaceResults.Results[18].Constructor.constructorId
-            ]
-          }`,
-        }}
-      >
-        <div>
-          <LoserDriverImage
-            src={getImageLink({
-              type: 'driver',
-              query: lastRaceResults.Results[18].Driver.driverId,
-            })}
-            alt={lastRaceResults.Results[18].Driver.familyName}
+          >
+            <WorstDriverImage
+              src={getImageLink({
+                type: 'driver',
+                query: results[19].Driver.driverId,
+              })}
+              alt={results[19].Driver.familyName}
+              style={{
+                border: `2px solid ${
+                  theme.colors.teams[results[19].Constructor.constructorId]
+                }`,
+              }}
+            />
+            <div>
+              <DriverName>
+                {results[19].Driver.givenName +
+                  ' ' +
+                  results[19].Driver.familyName}
+              </DriverName>
+              <DriverPosition>{results[19].position + 'th'}</DriverPosition>
+            </div>
+            <DriverPoints>{results[19].points}</DriverPoints>
+          </WorstDriversListItem>
+          <WorstDriversListItem
             style={{
               border: `2px solid ${
-                theme.colors.teams[
-                  lastRaceResults.Results[18].Constructor.constructorId
-                ]
+                theme.colors.teams[results[18].Constructor.constructorId]
               }`,
             }}
-          />
-        </div>
-        <NameWrapper>
-          <Subname>
-            {lastRaceResults.Results[18].Driver.givenName +
-              ' ' +
-              lastRaceResults.Results[18].Driver.familyName}
-          </Subname>
-          <Subheader>{lastRaceResults.Results[18].position + 'th'}</Subheader>
-        </NameWrapper>
-        <RecentPoints>
-          <MainPoints>{lastRaceResults.Results[18].points}</MainPoints>
-        </RecentPoints>
-      </BottomDriver>
-      <BottomDriver
-        style={{
-          border: `2px solid ${
-            theme.colors.teams[
-              lastRaceResults.Results[17].Constructor.constructorId
-            ]
-          }`,
-        }}
-      >
-        <div>
-          <LoserDriverImage
-            src={getImageLink({
-              type: 'driver',
-              query: lastRaceResults.Results[17].Driver.driverId,
-            })}
-            alt={lastRaceResults.Results[17].Driver.familyName}
+          >
+            <WorstDriverImage
+              src={getImageLink({
+                type: 'driver',
+                query: results[18].Driver.driverId,
+              })}
+              alt={results[18].Driver.familyName}
+              style={{
+                border: `2px solid ${
+                  theme.colors.teams[results[18].Constructor.constructorId]
+                }`,
+              }}
+            />
+            <div>
+              <DriverName>
+                {results[18].Driver.givenName +
+                  ' ' +
+                  results[18].Driver.familyName}
+              </DriverName>
+              <DriverPosition>{results[18].position + 'th'}</DriverPosition>
+            </div>
+            <DriverPoints>{results[18].points}</DriverPoints>
+          </WorstDriversListItem>
+          <WorstDriversListItem
             style={{
               border: `2px solid ${
-                theme.colors.teams[
-                  lastRaceResults.Results[17].Constructor.constructorId
-                ]
+                theme.colors.teams[results[17].Constructor.constructorId]
               }`,
             }}
-          />
-        </div>
-        <NameWrapper>
-          <Subname>
-            {lastRaceResults.Results[17].Driver.givenName +
-              ' ' +
-              lastRaceResults.Results[17].Driver.familyName}
-          </Subname>
-          <Subheader>{lastRaceResults.Results[17].position + 'th'}</Subheader>
-        </NameWrapper>
-        <RecentPoints>
-          <MainPoints>{lastRaceResults.Results[17].points}</MainPoints>
-        </RecentPoints>
-      </BottomDriver>
-    </HomeBoxBottom>
+          >
+            <WorstDriverImage
+              src={getImageLink({
+                type: 'driver',
+                query: results[17].Driver.driverId,
+              })}
+              alt={results[17].Driver.familyName}
+              style={{
+                border: `2px solid ${
+                  theme.colors.teams[results[17].Constructor.constructorId]
+                }`,
+              }}
+            />
+            <div>
+              <DriverName>
+                {results[17].Driver.givenName +
+                  ' ' +
+                  results[17].Driver.familyName}
+              </DriverName>
+              <DriverPosition>{results[17].position + 'th'}</DriverPosition>
+            </div>
+            <DriverPoints>{results[17].points}</DriverPoints>
+          </WorstDriversListItem>
+        </WorstDriversList>
+      </div>
+    </WorstDriversWrapper>
   );
 };
