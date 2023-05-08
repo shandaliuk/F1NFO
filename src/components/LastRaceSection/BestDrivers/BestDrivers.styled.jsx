@@ -7,6 +7,10 @@ export const BestDriversWrapper = styled.div`
   align-items: flex-end;
   border-radius: 6px;
   border: 2px solid ${props => props.theme.colors.secondary};
+
+  @media screen and (min-width: 768px) {
+    height: 390px;
+  }
 `;
 
 export const BestDriversHeading = styled.h2`
@@ -26,6 +30,11 @@ export const DriversImageList = styled.ul`
     justify-content: center;
     column-gap: 100px;
   }
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    column-gap: 0px;
+  }
 `;
 
 export const BestDriverName = styled.h3`
@@ -38,11 +47,19 @@ export const BestDriverName = styled.h3`
 export const SecondDriverListItem = styled.li`
   width: 98px;
   color: ${props => props.theme.colors.secondPlace};
+
+  @media screen and (min-width: 768px) {
+    width: 171px;
+  }
 `;
 
 export const ThirdDriverListItem = styled.li`
   width: 98px;
   color: ${props => props.theme.colors.thirdPlace};
+
+  @media screen and (min-width: 768px) {
+    width: 171px;
+  }
 `;
 
 export const WinnerListItem = styled.li`
@@ -52,6 +69,10 @@ export const WinnerListItem = styled.li`
   transform: translateX(50%);
   width: 112px;
   color: ${props => props.theme.colors.firstPlace};
+
+  @media screen and (min-width: 768px) {
+    width: 191px;
+  }
 `;
 
 export const DriverImage = styled.img`
@@ -64,7 +85,7 @@ export const PointsList = styled.ul`
   right: 0;
   width: 100%;
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   justify-content: space-between;
 
   @media screen and (min-width: 480px) {
@@ -87,6 +108,12 @@ export const WinnerPoinstListItem = styled.li`
   @media screen and (min-width: 480px) {
     width: 100px;
   }
+
+  @media screen and (min-width: 768px) {
+    width: 120px;
+    height: 80px;
+    font-size: 40px;
+  }
 `;
 
 export const SecondPlaceListItem = styled.li`
@@ -103,6 +130,12 @@ export const SecondPlaceListItem = styled.li`
   @media screen and (min-width: 480px) {
     width: 90px;
   }
+
+  @media screen and (min-width: 768px) {
+    width: 100px;
+    height: 60px;
+    font-size: 34px;
+  }
 `;
 
 export const ThirdPlaceListItem = styled.li`
@@ -116,7 +149,9 @@ export const ThirdPlaceListItem = styled.li`
   color: ${props => props.theme.colors.thirdPlace};
   background-color: ${props => props.theme.colors.primary};
 
-  @media screen and (min-width: 480px) {
-    width: 90px;
+  @media screen and (min-width: 768px) {
+    width: 100px;
+    height: 60px;
+    font-size: 34px;
   }
 `;

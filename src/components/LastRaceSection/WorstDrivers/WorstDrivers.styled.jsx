@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 export const WorstDriversWrapper = styled.div`
   margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 12px;
+  }
 `;
 
 export const WorstDriversHeading = styled.h2`
@@ -24,6 +28,10 @@ export const WorstDriversListItem = styled.li`
   align-items: center;
   padding: 5px 15px;
   border-radius: 6px;
+
+  @media screen and (min-width: 768px) {
+    padding: 10px 30px;
+  }
 `;
 
 export const WorstDriverImage = styled.img`
@@ -35,17 +43,31 @@ export const WorstDriverImage = styled.img`
 `;
 
 export const DriverName = styled.p`
+  margin-bottom: 2px;
   font-size: 12px;
   font-weight: 300;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    font-weight: 500;
+  }
 `;
 
 export const DriverPosition = styled.p`
   font-size: 12px;
   font-weight: 300;
   color: ${props => props.theme.colors.secondary};
+
+  @media screen and (min-width: 768px) {
+    font-weight: 500;
+  }
 `;
 
 export const DriverPoints = styled.p`
   font-size: 25px;
   font-weight: 500;
+
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+  }
 `;

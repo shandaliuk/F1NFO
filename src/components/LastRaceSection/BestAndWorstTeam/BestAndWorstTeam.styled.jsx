@@ -14,11 +14,19 @@ export const CarsListItem = styled.li`
   align-items: center;
   row-gap: 5px;
   border-radius: 6px;
+
+  @media screen and (min-width: 768px) {
+    padding: 24px 30px 24px 30px;
+  }
 `;
 
 export const ConstructorPoints = styled.p`
   font-size: 25px;
   font-weight: 500;
+
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+  }
 `;
 
 export const CarImage = styled.img`
@@ -34,9 +42,17 @@ export const CarCategory = styled.p`
   text-transform: uppercase;
   writing-mode: vertical-lr;
   color: ${props => props.theme.colors.secondary};
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const ConstructorName = styled.p`
   font-size: 14px;
   font-weight: 300;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
 `;
