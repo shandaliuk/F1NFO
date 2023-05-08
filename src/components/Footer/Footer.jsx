@@ -1,24 +1,22 @@
 import { Logo } from 'components/Logo/Logo';
+import { Container } from 'components/Container/Container';
 import {
-  SiteFooter,
-  FooterContainer,
-  FooterNavigation,
-  LogoWrapper,
-  FooterLinks,
-  FooterMessage,
+  FooterLinksList,
+  FooterInfo,
+  FooterLogoWrapper,
   AuthorLink,
   FooterLink,
 } from './Footer.styled';
 
 export const Footer = () => {
   return (
-    <SiteFooter>
-      <FooterContainer>
-        <FooterNavigation>
-          <LogoWrapper>
+    <footer>
+      <Container>
+        <nav>
+          <FooterLogoWrapper>
             <Logo />
-          </LogoWrapper>
-          <FooterLinks>
+          </FooterLogoWrapper>
+          <FooterLinksList>
             <li>
               <FooterLink to="schedule">Schedule</FooterLink>
             </li>
@@ -28,12 +26,12 @@ export const Footer = () => {
             <li>
               <FooterLink to="standings">Standings</FooterLink>
             </li>
-          </FooterLinks>
-        </FooterNavigation>
-        <FooterMessage>
+          </FooterLinksList>
+        </nav>
+        <FooterInfo>
           Developed by <AuthorLink>shandaliuk</AuthorLink>
-        </FooterMessage>
-      </FooterContainer>
-    </SiteFooter>
+        </FooterInfo>
+      </Container>
+    </footer>
   );
 };

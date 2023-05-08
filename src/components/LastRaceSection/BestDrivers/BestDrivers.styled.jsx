@@ -35,7 +35,7 @@ export const DriversImageList = styled.ul`
     column-gap: 0px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1280px) {
     column-gap: 54px;
   }
 `;
