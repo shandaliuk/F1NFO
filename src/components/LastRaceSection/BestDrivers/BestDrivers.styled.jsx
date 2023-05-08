@@ -32,8 +32,11 @@ export const DriversImageList = styled.ul`
   }
 
   @media screen and (min-width: 768px) {
-    justify-content: center;
     column-gap: 0px;
+  }
+
+  @media screen and (min-width: 768px) {
+    column-gap: 54px;
   }
 `;
 
@@ -51,6 +54,10 @@ export const SecondDriverListItem = styled.li`
   @media screen and (min-width: 768px) {
     width: 171px;
   }
+
+  @media screen and (min-width: 1280px) {
+    width: 191px;
+  }
 `;
 
 export const ThirdDriverListItem = styled.li`
@@ -59,6 +66,10 @@ export const ThirdDriverListItem = styled.li`
 
   @media screen and (min-width: 768px) {
     width: 171px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 191px;
   }
 `;
 
@@ -72,6 +83,10 @@ export const WinnerListItem = styled.li`
 
   @media screen and (min-width: 768px) {
     width: 191px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 218px;
   }
 `;
 
@@ -91,6 +106,10 @@ export const PointsList = styled.ul`
   @media screen and (min-width: 480px) {
     justify-content: center;
     column-gap: 5px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    column-gap: 30px;
   }
 `;
 
