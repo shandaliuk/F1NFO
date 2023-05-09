@@ -14,6 +14,10 @@ export const WorstDriversHeading = styled.h2`
   margin-bottom: 5px;
   text-transform: uppercase;
   color: ${props => props.theme.colors.secondary};
+
+  @media screen and (min-width: 768px) {
+    text-align: end;
+  }
 `;
 
 export const WorstDriversList = styled.ul`

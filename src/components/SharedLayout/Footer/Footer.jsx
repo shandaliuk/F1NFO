@@ -1,5 +1,5 @@
-import { Logo } from 'components/Logo/Logo';
-import { Container } from 'components/Container/Container';
+import { Logo } from 'components/SharedLayout/Logo/Logo';
+import { Container } from 'components/SharedLayout/Container/Container';
 import {
   FooterLinksList,
   FooterInfo,
