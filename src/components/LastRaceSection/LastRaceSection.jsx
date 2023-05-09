@@ -1,4 +1,3 @@
-import { Container } from 'components/SharedLayout/Container/Container';
 import { LastRaceBanner } from 'components/LastRaceSection/LastRaceBanner/LastRaceBanner';
 import { LastRaceResults } from 'components/LastRaceSection/LastRaceResults/LastRaceResults';
 import { PreviousRaceSection, LastRaceWrapper } from './LastRaceSection.styled';
@@ -6,12 +5,10 @@ import { PreviousRaceSection, LastRaceWrapper } from './LastRaceSection.styled';
 export const LastRaceSection = ({ lastRaceResults }) => {
   return (
     <PreviousRaceSection>
-      <Container>
-        <LastRaceWrapper>
-          <LastRaceBanner country={lastRaceResults.Circuit.Location.country} />
-          <LastRaceResults results={lastRaceResults.Results} />
-        </LastRaceWrapper>
-      </Container>
+      <LastRaceWrapper>
+        <LastRaceBanner country={lastRaceResults.Circuit.Location.country} />
+        <LastRaceResults results={lastRaceResults.Results} />
+      </LastRaceWrapper>
     </PreviousRaceSection>
   );
 };

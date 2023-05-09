@@ -7,6 +7,9 @@ export const formulaOneApi = createApi({
     getSchedule: builder.query({
       query: () => `current.json`,
     }),
+    getNextRaceInfo: builder.query({
+      query: () => `current/next.json`,
+    }),
     getDriverStandings: builder.query({
       query: () => `current/driverStandings.json`,
     }),
@@ -21,6 +24,7 @@ export const formulaOneApi = createApi({
 
 export const {
   useGetScheduleQuery,
+  useGetNextRaceInfoQuery,
   useGetDriverStandingsQuery,
   useGetConstructorStandingsQuery,
   useGetLastRaceResultsQuery,

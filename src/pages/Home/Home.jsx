@@ -1,7 +1,13 @@
 import { useGetLastRaceResultsQuery } from 'services/formulaOneApi/formulaOneApi';
+import { Container } from 'components/SharedLayout/Container/Container';
 import { LastRaceSection } from 'components/LastRaceSection/LastRaceSection';
 import { NextRaceSection } from 'components/NextRaceSection/NextRaceSection';
-import { HomeMain } from './Home.styled';
+import { CurrentStandingsSection } from 'components/CurrentStandingsSection/CurrentStandingsSection';
+import {
+  HomeSectionsWrapper,
+  LastRaceInfoWrapper,
+  NextRaceAndStandingsWrapper,
+} from './Home.styled';
 
 export const Home = () => {
   const {
@@ -13,18 +19,22 @@ export const Home = () => {
   return (
     !isLoading &&
     !isError && (
-      <HomeMain>
-        <div>
-          <LastRaceSection
-            lastRaceResults={lastRaceResultsObj.MRData.RaceTable.Races[0]}
-          />
-          <section>Overview</section>
-        </div>
-        <div>
-          <NextRaceSection />
-          <section>HomeStandings</section>
-        </div>
-      </HomeMain>
+      <main>
+        <Container>
+          <HomeSectionsWrapper>
+            <LastRaceInfoWrapper>
+              <LastRaceSection
+                lastRaceResults={lastRaceResultsObj.MRData.RaceTable.Races[0]}
+              />
+              <section>Overview</section>
+            </LastRaceInfoWrapper>
+            <NextRaceAndStandingsWrapper>
+              <NextRaceSection />
+              <CurrentStandingsSection />
+            </NextRaceAndStandingsWrapper>
+          </HomeSectionsWrapper>
+        </Container>
+      </main>
     )
   );
 };
